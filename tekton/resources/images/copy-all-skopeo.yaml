@@ -28,7 +28,7 @@ spec:
       - name: CATALOG
         value: $(workspaces.workarea.path)/catalog
       - name: DOCKER_CONFIG
-        value: $(workspaces.workarea.path)/.docker
+        value: /root/.docker
     steps:
     - name: authenticate
       image: cgr.dev/chainguard/crane:latest-dev@sha256:6fc6fcdeb173c7951f038e6a7b230f586c1be05a011d9e6f9db6c614ec412c2f

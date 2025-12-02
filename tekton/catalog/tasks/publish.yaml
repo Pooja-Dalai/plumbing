@@ -69,7 +69,7 @@ spec:
       - name: IMAGES
         value: $(params.images)
       - name: DOCKER_CONFIG
-        value: /workspace/.docker
+        value: /root/.docker
       - name: KO_EXTRA_ARGS
         value: "$(params.koExtraArgs)"
       - name: OUTPUT_RELEASE_DIR
