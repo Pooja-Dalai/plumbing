@@ -53,7 +53,7 @@ jobs:
           fetch-depth: 2
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@6da3c88b60ebf09464ada9b06fba5b6f2d34bb94 # v45.0.7
+        uses: tj-actions/changed-files@abdd2f68ea150cee8f236d4a9fb4e0f2491abf1b # v45.0.7
         with:
           files: |
             tekton/images/${{ matrix.name }}/**
@@ -80,7 +80,7 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         if: steps.changed-files.outputs.any_changed == 'true' # || github.event_name != 'pull_request'
         id: meta
-        uses: docker/metadata-action@318604b99e75e41977312d83839a89be02ca4893 # v5.9.0
+        uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051 # v5.10.0
         with:
           images: ${{ env.REGISTRY }}/${{ github.repository }}/${{ matrix.name }}
           tags: |
